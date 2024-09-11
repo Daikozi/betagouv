@@ -1,38 +1,20 @@
 {
-  "extends": [
-    "airbnb-base",
-    "next/core-web-vitals",
-    "plugin:prettier/recommended",
-    "plugin:storybook/recommended"
-  ],
+  "extends": ["airbnb-base", "next/core-web-vitals", "plugin:prettier/recommended", "plugin:storybook/recommended"],
   "rules": {
     "prettier/prettier": [
       "error",
       {
-        "singleQuote": false,
-        "endOfLine": "auto",
-        "semi": false
+        "singleQuote": true,
+        "semi": false,
+        "printWidth": 120
       }
     ]
   },
   "overrides": [
     {
-      "files": [
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.mts"
-      ],
-      "plugins": [
-        "@typescript-eslint",
-        "unused-imports",
-        "simple-import-sort"
-      ],
-      "extends": [
-        "airbnb",
-        "airbnb-typescript",
-        "next/core-web-vitals",
-        "plugin:prettier/recommended"
-      ],
+      "files": ["**/*.ts", "**/*.tsx", "**/*.mts"],
+      "plugins": ["@typescript-eslint", "unused-imports", "simple-import-sort"],
+      "extends": ["airbnb", "airbnb-typescript", "next/core-web-vitals", "plugin:prettier/recommended"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "project": "./tsconfig.json"
@@ -41,13 +23,17 @@
         "prettier/prettier": [
           "error",
           {
-            "singleQuote": false,
-            "endOfLine": "auto",
+            "singleQuote": true,
             "semi": false,
-            "trailingComma": "es5"
+            "printWidth": 120
           }
         ],
-        "import/no-extraneous-dependencies": "warn",
+        "import/no-extraneous-dependencies": [
+          "warn",
+          {
+            "devDependencies": ["**/*.test.{js,jsx,ts,tsx}", "**/vitest.config.{js,ts}"]
+          }
+        ],
         "no-param-reassign": "off",
         "consistent-return": "off",
         "no-empty-pattern": "off",
@@ -64,12 +50,7 @@
         "react/no-unstable-nested-components": "off",
         "@typescript-eslint/comma-dangle": "off",
         "@typescript-eslint/consistent-type-imports": "error",
-        "no-restricted-syntax": [
-          "error",
-          "ForInStatement",
-          "LabeledStatement",
-          "WithStatement"
-        ],
+        "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
         "import/prefer-default-export": "off",
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
