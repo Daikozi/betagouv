@@ -4,8 +4,8 @@ import firebase_app from '../firebase/config'
 
 const db = getFirestore(firebase_app)
 
-export const fetchArticles = async (collectionName: string) => {
-  const q = query(collection(db, collectionName))
+export const fetchArticles = async () => {
+  const q = query(collection(db, 'articles'))
   const querySnapshot = await getDocs(q)
   return querySnapshot.docs.map((doc) => ({
     id: doc.id,
@@ -13,7 +13,7 @@ export const fetchArticles = async (collectionName: string) => {
   }))
 }
 
-export const updateArticle = async (collectionName: string, docId: string, updatedData: any) => {
-  const docRef = doc(db, collectionName, docId)
+export const updateArticle = async (docId: string, updatedData: any) => {
+  const docRef = doc(db, 'articles', docId)
   await updateDoc(docRef, updatedData)
 }

@@ -3,208 +3,27 @@ import Image from 'next/image'
 import Card from '@/components/Card/Card'
 
 import styles from './page.module.css'
+import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query'
+import { fetchArticles } from '@/services/firebaseQueries'
+import Articles from '@/components/Articles/Articles'
 
-export default function Home() {
+const Home = async () => {
+  const queryClient = new QueryClient()
+
+  await queryClient.prefetchQuery({
+    queryKey: ['articles'],
+    queryFn: fetchArticles,
+  })
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <div className={styles.topArticle}>
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-            isHorizontal
-          />
-        </div>
-        <div className={styles.cardContainer}>
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-          <Card
-            title="Qu'est-ce que le Pass Culture et comment l’obtenir ?"
-            description="La carte donne des aperçus cliquables d’une page de contenu à l’utilisateur. Elle fait généralement partie d'une collection ou liste d’aperçus de contenu similaires. La carte n’est jamais présentée de manière isolée."
-            link="/article/1/"
-          />
-        </div>
+        <HydrationBoundary state={dehydrate(queryClient)}>
+          <Articles />
+        </HydrationBoundary>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="https://nextjs.org/icons/file.svg" alt="File icon" width={16} height={16} />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="https://nextjs.org/icons/window.svg" alt="Window icon" width={16} height={16} />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image aria-hidden src="https://nextjs.org/icons/globe.svg" alt="Globe icon" width={16} height={16} />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   )
 }
+
+export default Home

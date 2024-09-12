@@ -14,8 +14,6 @@ const Logout: FC = () => {
   const { isLoggedIn, logout } = useAuthentication()
   const { data } = useFetchArticles()
 
-  console.log({ data })
-
   if (!isLoggedIn) {
     return null
   }

@@ -20,7 +20,7 @@ const Header = () => {
         <Typography variant="lead">Le Blog de l&apos;État</Typography>
       </div>
       <div className={styles.buttonContainer}>
-        <SignIn />
+        {/* <SignIn /> */}
         <SignUp />
         <Logout />
         <Admin />

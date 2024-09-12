@@ -7,8 +7,8 @@ type UseFetchArticlesReturn = Pick<UseQueryResult<any>, 'data' | 'isLoading' | '
 
 export const useFetchArticles = (): UseFetchArticlesReturn => {
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['documents'],
-    queryFn: () => fetchArticles('articles'),
+    queryKey: ['articles'],
+    queryFn: () => fetchArticles(),
   })
 
   return { data, isLoading, isError }
