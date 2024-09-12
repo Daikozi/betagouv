@@ -4,7 +4,8 @@ import type { Metadata } from 'next'
 
 import Header from '@/components/Header/Header'
 
-import StoreProvider from './StoreProvider'
+import QueryProvider from './providers/QueryProvider'
+import StoreProvider from './providers/StoreProvider'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,8 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <StoreProvider>
-          <Header />
-          {children}
+          <QueryProvider>
+            <Header />
+            {children}
+          </QueryProvider>
         </StoreProvider>
       </body>
     </html>

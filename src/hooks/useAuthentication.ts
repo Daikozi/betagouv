@@ -15,8 +15,6 @@ export const useAuthentication = (): UseAuthenticationReturn => {
   const { isLoggedIn, userName } = useAppSelector((state) => state.authentication)
   const dispatch = useAppDispatch()
 
-  console.log({ isLoggedIn, userName })
-
   const login = useCallback(
     (displayName: string | null) => {
       dispatch(loginAction(displayName || 'Anonymous'))
