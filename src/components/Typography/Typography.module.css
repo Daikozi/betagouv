@@ -1,0 +1,162 @@
+.h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.h3 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.h5 {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.h6 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.displayXL {
+  font-size: 5rem;
+  line-height: 5.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.displayLG {
+  font-size: 4.5rem;
+  line-height: 5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.displayMD {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.displaySM {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.displayXS {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.sm {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.xs {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .h2 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .h4 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .h5 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .h6 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .displayXL {
+    font-size: 4.5rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .displayLG {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .displayMD {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .displaySM {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .displayXS {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+  }
+}

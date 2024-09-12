@@ -1,0 +1,57 @@
+.container {
+  border: 1px solid #dddddd;
+}
+
+.horizontal {
+  border: 1px solid #dddddd;
+  display: flex;
+  width: 100%;
+}
+
+.horizontal .imageContainer {
+  width: 50%;
+  display: flex;
+}
+
+.horizontal .textContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.textContainer {
+  padding: 1.5rem;
+  padding-top: 0;
+}
+
+.arrowContainer {
+  display: flex;
+  justify-content: end;
+  margin-top: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .horizontal {
+    flex-wrap: wrap;
+  }
+
+  .horizontal .imageContainer {
+    width: 100%;
+  }
+
+  .horizontal .textContainer {
+    width: 100%;
+  }
+}

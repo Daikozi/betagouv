@@ -1,42 +1,192 @@
+@font-face {
+  font-family: 'Marianne';
+  src:
+    url('./fonts/Marianne-Light.woff2') format('woff2'),
+    url('./fonts/Marianne-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src:
+    url('./fonts/Marianne-Light_Italic.woff2') format('woff2'),
+    url('./fonts/Marianne-Light_Italic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src:
+    url('./fonts/Marianne-Regular.woff2') format('woff2'),
+    url('./fonts/Marianne-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src:
+    url('./fonts/Marianne-Regular_Italic.woff2') format('woff2'),
+    url('./fonts/Marianne-Regular_Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src:
+    url('./fonts/Marianne-Medium.woff2') format('woff2'),
+    url('./fonts/Marianne-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src:
+    url('./fonts/Marianne-Medium_Italic.woff2') format('woff2'),
+    url('./fonts/Marianne-Medium_Italic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src:
+    url('./fonts/Marianne-Bold.woff2') format('woff2'),
+    url('./fonts/Marianne-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src:
+    url('./fonts/Marianne-Bold_Italic.woff2') format('woff2'),
+    url('./fonts/Marianne-Bold_Italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src:
+    url('./fonts/Marianne-ExtraBold.woff2') format('woff2'),
+    url('./fonts/Marianne-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Marianne';
+  src:
+    url('./fonts/Marianne-ExtraBold_Italic.woff2') format('woff2'),
+    url('./fonts/Marianne-ExtraBold_Italic.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('./fonts/Spectral-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  font-size: 16px;
+  --text-color-light: #4a4a4a;
+  --text-color-dark: #ffffff;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  color: var(--text-color-light);
+  font-family: 'Marianne', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  color: #000091;
 }
