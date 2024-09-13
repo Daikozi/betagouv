@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 'use client'
 
 import { useRouter } from 'next/navigation'
@@ -17,7 +19,7 @@ function Page() {
     const { result, error } = await signIn(email, password)
 
     if (error) {
-      return console.log(error)
+      return console.error(error)
     }
 
     console.log(result)

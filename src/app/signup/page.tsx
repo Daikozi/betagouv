@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 'use client'
 
 import { useRouter } from 'next/navigation'
@@ -20,7 +22,6 @@ const SignUp: FC = () => {
       return console.log(error)
     }
 
-    // else successful
     console.log(result)
     return router.push('/')
   }

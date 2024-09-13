@@ -1,11 +1,9 @@
-import Image from 'next/image'
+import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query'
 
-import Card from '@/components/Card/Card'
+import Articles from '@/components/Articles/Articles'
+import { fetchArticles } from '@/services/firebaseQueries'
 
 import styles from './page.module.css'
-import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query'
-import { fetchArticles } from '@/services/firebaseQueries'
-import Articles from '@/components/Articles/Articles'
 
 const Home = async () => {
   const queryClient = new QueryClient()

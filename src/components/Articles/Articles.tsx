@@ -1,8 +1,10 @@
 'use client'
 
-import { FC } from 'react'
-import Card from '../Card/Card'
+import type { FC } from 'react'
+
 import { useFetchArticles } from '@/hooks/useFetchArticles'
+
+import Card from '../Card/Card'
 import styles from './Articles.module.css'
 
 const Articles: FC = () => {
